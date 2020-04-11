@@ -32,11 +32,11 @@
 
   const ajaxFileUplaod = (file) => {
     var formData = new FormData();
-    formData.append('file', file);
+    formData.append("file", file);
     $.ajax({
       type: 'POST',
       data: formData,
-      url: 'FIX_ME',
+      url: `http://127.0.0.1:3000/background.jpg`,
       cache: false,
       contentType: false,
       processData: false,
@@ -61,7 +61,6 @@
       console.log('Not a jpg file!');
       return;
     }
-
     ajaxFileUplaod(file);
   });
 
